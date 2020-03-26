@@ -1,0 +1,32 @@
+/* ------------------------------------------------------------ *\
+	# Header
+\* ------------------------------------------------------------ */
+
+.header { width: 100%; position: fixed; top: 0; left: 0; z-index: 55; background: $c-white; padding: 28px 0 26px; box-shadow: 0 3px 5px rgba(122, 149, 152, .17); }
+.header .header__inner { display: flex; justify-content: space-between; }
+.header .header__content { display: flex; align-items: center; justify-content: flex-end; }
+
+.header .logo-holder { position: relative; z-index: 5; }
+
+/* Tablet Portrait */
+
+$breakpoint-tablet-portrait {
+	.header { padding: 15px 0; }
+	.header .header__inner { align-items: center; }
+
+	.header .header__content { position: absolute; top: 0; left: 0; width: 100%; background: $c-white; display: block; padding: 100px 30px 40px; text-align: center; opacity: 0; visibility: hidden; transition: opacity .4s, visibility .4s; }
+
+	.has-nav-active .header .header__content { opacity: 1; visibility: visible; }
+}
+
+/* ------------------------------------------------------------ *\
+	- Admin Bar (if header is fixed)
+\* ------------------------------------------------------------ */
+
+/*remove comments for fixed hader*/
+
+body.admin-bar .header { margin-top: 32px; }
+
+$breakpoint-admin-bar {
+	body.admin-bar .header { margin-top: 46px; }
+}

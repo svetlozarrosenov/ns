@@ -1,0 +1,30 @@
+/* ------------------------------------------------------------ *\
+	# Logos
+\* ------------------------------------------------------------ */
+
+[class^="logo"] { font-size: 0; line-height: 0; position: relative; display: block; vertical-align: middle; text-decoration: none; }
+[class^="logo"] > img { display: block; width: 100%; }
+
+/* ------------------------------------------------------------ *\
+	Logo
+\* ------------------------------------------------------------ */
+
+.logo { width: 245px; }
+
+/* Mobile */
+
+$breakpoint-mobile {
+	.logo { width: 200px; }
+}
+
+/* ------------------------------------------------------------ *\
+	Logo Footer
+\* ------------------------------------------------------------ */
+
+.logo-footer { width: 212px; }
+
+/* Mobile */
+
+$breakpoint-mobile {
+	.logo-footer { width: 190px; margin: 0 auto; }
+}

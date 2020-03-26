@@ -1,0 +1,29 @@
+/* ------------------------------------------------------------ *\
+	Gutenberg Block - Blockquote
+\* ------------------------------------------------------------ */
+
+
+.wp-block-quote:not(.is-large),
+.wp-block-quote:not(.is-style-large) { border-left: 2px solid #363636; padding: 0 0 0 16px; }
+
+.wp-block-quote p { font-size: 1em; font-style: normal; line-height: 1.8; }
+.wp-block-quote cite { font-size: 14px; }
+
+.wp-block-quote.is-large,
+.wp-block-quote.is-style-large { margin: 15px 0; padding: 0; border-left: none; }
+
+.wp-block-quote.is-large p,
+.wp-block-quote.is-style-large p { font-size: 24px; line-height: 1.4; font-style: italic; }
+
+.wp-block-quote.is-large cite,
+.wp-block-quote.is-style-large cite,
+.wp-block-quote.is-large footer,
+.wp-block-quote.is-style-large footer { font-size: 14px; }
+
+$breakpoint-tablet-portrait {
+	.wp-block-quote.is-large,
+	.wp-block-quote.is-style-large { margin: 15px 0; padding: 15px 0; }
+
+	.wp-block-quote.is-large p,
+	.wp-block-quote.is-style-large p { font-size: 16px }
+}

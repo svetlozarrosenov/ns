@@ -1,0 +1,15 @@
+/* ------------------------------------------------------------ *\
+	Gutenberg Block - Gallery
+\* ------------------------------------------------------------ */
+
+.wp-block-gallery { list-style-type: none; padding-left: 0; text-align: center; }
+
+.wp-block-gallery .blocks-gallery-image:last-child,
+.wp-block-gallery .blocks-gallery-item:last-child { margin-bottom: 16px; }
+
+.wp-block-gallery figcaption a { color: #fff; }
+
+.blocks-gallery-grid .blocks-gallery-image figure, 
+.blocks-gallery-grid .blocks-gallery-item figure, 
+.wp-block-gallery .blocks-gallery-image figure, 
+.wp-block-gallery .blocks-gallery-item figure { justify-content: center; display: block; }

@@ -1,0 +1,22 @@
+/* ------------------------------------------------------------ *\
+	Gutenberg Block - Button
+\* ------------------------------------------------------------ */
+
+.wp-block-button .wp-block-button__link { border: none; font-size: 16px; font-family: $ff-base; line-height: 18px; box-sizing: border-box; font-weight: bold; text-decoration: none; padding: 15px 12px; outline: none; outline: none; }
+
+.wp-block-button .wp-block-button__link:not(.has-background) { background-color: #666; }
+.wp-block-button .wp-block-button__link:not(.has-text-color) { color: white; }
+.wp-block-button .wp-block-button__link:hover { color: white; background: #333; cursor: pointer; }
+.wp-block-button .wp-block-button__link:focus { color: white; background: #333; outline: thin dotted; outline-offset: -4px; }
+
+.wp-block-button:not(.is-style-squared) .wp-block-button__link { border-radius: 5px; }
+
+.wp-block-button.is-style-outline .wp-block-button__link,
+.wp-block-button.is-style-outline .wp-block-button__link:focus,
+.wp-block-button.is-style-outline .wp-block-button__link:active { border-width: 2px; border-style: solid; }
+
+.wp-block-button.is-style-outline .wp-block-button__link:not(.has-background) { background: transparent; }
+.wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color) { color: #666; border-color: currentColor; }
+
+.wp-block-button.is-style-outline .wp-block-button__link:hover { color: white; border-color: #333; }
+

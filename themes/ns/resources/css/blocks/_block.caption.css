@@ -1,0 +1,9 @@
+/* ------------------------------------------------------------ *\
+	Gutenberg Block - Caption
+\* ------------------------------------------------------------ */
+
+.wp-block-audio figcaption,
+.wp-block-video figcaption,
+.wp-block-image figcaption,
+.wp-block-gallery .blocks-gallery-image figcaption,
+.wp-block-gallery .blocks-gallery-item figcaption { font-size: 16px; font-family: $ff-base-titles; line-height: 18px; margin: 0; padding: 8px; text-align: center; }

@@ -1,0 +1,8 @@
+/* ------------------------------------------------------------ *\
+	Main
+\* ------------------------------------------------------------ */
+
+.main { width: 100%; flex-grow: 1; flex-shrink: 0; }
+
+body.error404 .main { display: flex; flex-wrap: wrap; }
+body.error404 .main > section { width: 100%; }

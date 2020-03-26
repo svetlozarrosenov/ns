@@ -1,0 +1,13 @@
+/* ------------------------------------------------------------ *\
+	Gutenberg Block - Latest Comments
+\* ------------------------------------------------------------ */
+
+.wp-block-latest-comments .wp-block-latest-comments__comment-meta { font-family: $ff-base-titles; font-weight: bold; }
+
+.wp-block-latest-comments .wp-block-latest-comments__comment-meta .wp-block-latest-comments__comment-date { font-weight: normal; }
+
+.wp-block-latest-comments .wp-block-latest-comments__comment,
+.wp-block-latest-comments .wp-block-latest-comments__comment-date,
+.wp-block-latest-comments .wp-block-latest-comments__comment-excerpt p { font-size: inherit; }
+
+.wp-block-latest-comments.has-dates .wp-block-latest-comments__comment-date { font-size: 12px; }

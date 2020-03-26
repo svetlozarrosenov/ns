@@ -1,0 +1,8 @@
+/* ------------------------------------------------------------ *\
+	- Transitions
+\* ------------------------------------------------------------ */
+
+a,
+button,
+input[type="submit"],
+input[type="button"] { transition: color $t-duration, background $t-duration, opacity $t-duration, transform $t-duration, border $t-duration; }

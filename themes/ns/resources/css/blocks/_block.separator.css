@@ -1,0 +1,22 @@
+/* ------------------------------------------------------------ *\
+	Gutenberg Block - Separator
+\* ------------------------------------------------------------ */
+
+.wp-block-separator,
+hr { background-color: #666; border: 0; height: 2px; margin-bottom: 30px; margin-top: 30px; max-width: 40px; text-align: left; display: none !important; }
+
+.wp-block-separator .is-style-wide,
+hr .is-style-wide { max-width: 100%; display: none !important; }
+
+.wp-block-separator.is-style-dots,
+hr.is-style-dots { max-width: 100%; background-color: inherit; border: inherit; height: inherit; text-align: center; display: none !important; }
+
+.wp-block-separator:before,
+hr:before { color: #666; font-size: 16px; padding-left: 20px; display: none !important; }
+
+/* Remove duplicate rule-line when a separator
+ * is followed by an H1, or H2 */
+.wp-block-separator + h1:before,
+hr + h1:before,
+.wp-block-separator + h2:before,
+hr + h2:before { display: none; display: none !important; }

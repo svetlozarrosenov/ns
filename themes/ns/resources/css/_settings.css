@@ -1,0 +1,51 @@
+/*fonts*/
+$font-size-base 			: 17px;
+$font-weight-base 			: 400;
+$line-height-base			: 1.5;
+$font-base-color 			: #6E6F72;
+
+$font-family-sans-serif     : 'Alegreya Sans', Helvetica, Arial, sans-serif;
+$font-family-serif          : Georgia, "Times New Roman", Times, serif;
+$ff-titillium  		        : 'Titillium Web', sans-serif;
+$ff-oswald  		        : 'Oswald', sans-serif;
+
+$ff-base 					: $font-family-sans-serif;
+$ff-base-titles				: $font-family-serif;
+
+/* transition timing*/
+$t-duration 				: 0.4s;
+
+/*shell*/
+$shell-max-width 			: 1330px;
+$shell-medium 				: 1060px;
+$shell-gutenberg 			: 840px;
+$shell-regular 				: 790px;
+$shell-small 				: 570px;
+$shell-gutter 				: 15px;
+
+/*colors*/
+$c-black 					: #000;
+$c-white 					: #fff;
+$c-white2 					: #F9FBF2;
+$c-base 					: #233E46;
+$c-orange 					: #F26022;
+$c-gray 					: #6E6F72;
+$c-lite-gray 				: #799496;
+
+/*responsive*/
+$responsive-xxs				: 374px;
+$responsive-xs				: 767px;
+$responsive-xs-min 			: 768px;
+$responsive-admin-bar 		: 782px;
+$responsive-ios				: 812px;
+$responsive-sm				: 1023px;
+$responsive-md				: 1200px;
+$responsive-lg 				: 1400px;
+
+$breakpoint-mobile-portrait : @media (max-width: $responsive-xxs);
+$breakpoint-mobile			: @media (max-width: $responsive-xs), screen and (max-width: $responsive-ios) and (orientation: landscape);
+$breakpoint-admin-bar 		: @media (max-width: $responsive-admin-bar);
+$breakpoint-tablet-portrait	: @media (max-width: $responsive-sm);
+$breakpoint-small-desktop	: @media (max-width: $responsive-md);
+$breakpoint-large-desktop 	: @media (max-width: $responsive-lg);
+$retina						: @media (min-resolution: 2dppx);

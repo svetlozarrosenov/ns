@@ -1,0 +1,5 @@
+/* ------------------------------------------------------------ *\
+	Gutenberg Block - Verse
+\* ------------------------------------------------------------ */
+
+.wp-block-verse { font-family: $ff-base-titles; font-size: $font-size-base; line-height: 1.8; }

@@ -1,0 +1,25 @@
+# /
+/languages
+/upgrade
+/debug.log
+/cache
+
+# /uploads
+/uploads/cache
+/uploads/wc-logs
+
+# /themes/
+/themes/default*
+
+# /plugins/
+/plugins/query-monitor
+
+# Query monitor adds this symlink. See https://github.com/johnbillion/query-monitor/wiki/db.php-Symlink
+/db.php
+
+# MacOS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes

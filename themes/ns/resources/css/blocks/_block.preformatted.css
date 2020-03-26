@@ -1,0 +1,5 @@
+/* ------------------------------------------------------------ *\
+	Gutenberg Block - Preformatted Text
+\* ------------------------------------------------------------ */
+
+.wp-block-preformatted { font-size: 14px; line-height: 1.8; padding: 15px; }

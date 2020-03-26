@@ -1,0 +1,34 @@
+/* ------------------------------------------------------------ *\
+	Gutenber Block - Columns
+\* ------------------------------------------------------------ */
+.wp-block-columns.wp-block-columns.alignfull { margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); }
+
+.wp-block-columns.wp-block-columns { display: flex; margin: -20px -20px 30px; }
+.wp-block-columns.wp-block-columns:last-child { margin-bottom: 0; }
+.wp-block-columns.wp-block-columns .wp-block-column { padding: 20px; margin: 0; /*flex-basis: auto;*/ }
+
+.wp-block-columns.wp-block-columns.has-2-columns .wp-block-column  { width: 50%; }
+.wp-block-columns.wp-block-columns.has-3-columns .wp-block-column  { width: 33.33%; }
+.wp-block-columns.wp-block-columns.has-4-columns .wp-block-column  { width: 25%; }
+.wp-block-columns.wp-block-columns.has-5-columns .wp-block-column  { width: 20%; }
+.wp-block-columns.wp-block-columns.has-6-columns .wp-block-column  { width: 16.66%; }
+
+$breakpoint-tablet-portrait{
+	.wp-block-columns.wp-block-columns.has-2-columns .wp-block-column  { width: 50%; }
+	.wp-block-columns.wp-block-columns.has-3-columns .wp-block-column  { width: 33.33%; }
+	.wp-block-columns.wp-block-columns.has-4-columns .wp-block-column  { width: 50%; }
+	.wp-block-columns.wp-block-columns.has-5-columns .wp-block-column  { width: 33.33%; }
+	.wp-block-columns.wp-block-columns.has-6-columns .wp-block-column  { width: 33.33%; }
+}
+
+$breakpoint-mobile{
+	.wp-block-columns.wp-block-columns { margin: -15px -20px 30px; }
+	.wp-block-columns.wp-block-columns .wp-block-column { padding: 15px 20px; }
+
+	.wp-block-columns.wp-block-columns.has-2-columns .wp-block-column,
+	.wp-block-columns.wp-block-columns.has-3-columns .wp-block-column,
+	.wp-block-columns.wp-block-columns.has-4-columns .wp-block-column,
+	.wp-block-columns.wp-block-columns.has-5-columns .wp-block-column,
+	.wp-block-columns.wp-block-columns.has-6-columns .wp-block-column { width: 100%; }
+}
+

@@ -1,0 +1,25 @@
+/* ------------------------------------------------------------ *\
+	- Wrapper
+\* ------------------------------------------------------------ */
+
+.wrapper { padding-top: 104px; position: relative; display : flex; flex-direction: row; flex-wrap : wrap; background-color: $c-white; overflow: hidden; }
+
+.wrapper .wrapper__inner { width: 100%; display: flex; flex-direction: column; min-height: 100vh;}
+
+body.admin-bar .wrapper__inner { min-height: calc( 100vh - 32px); }
+
+$breakpoint-admin-bar {
+	body.admin-bar .wrapper__inner { min-height: calc( 100vh - 46px); }
+}
+
+/* Tablet Portrait */
+
+$breakpoint-tablet-portrait {
+  .wrapper { padding-top: 80px; }
+}
+
+/* Mobile */
+
+$breakpoint-mobile {
+  .wrapper { padding-top: 76px; }  
+}
