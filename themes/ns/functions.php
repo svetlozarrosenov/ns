@@ -44,28 +44,6 @@ function crb_enqueue_assets() {
 	}
 }
 
-# Enqueue JS and CSS assets on admin pages
-add_action( 'admin_enqueue_scripts', 'crb_admin_enqueue_scripts' );
-function crb_admin_enqueue_scripts() {
-	$template_dir = get_template_directory_uri();
-
-	# Enqueue Scripts
-	# @crb_enqueue_script attributes -- id, location, dependencies, in_footer = false
-	# crb_enqueue_script( 'theme-admin-functions', $template_dir . '/js/admin-functions.js', array( 'jquery' ) );
-
-	# Enqueue Styles
-	# @crb_enqueue_style attributes -- id, location, dependencies, media = all
-	# crb_enqueue_style( 'theme-admin-styles', $template_dir . '/css/admin-style.css' );
-
-	# Editor Styles
-	# add_editor_style( 'css/custom-editor-style.css' );
-}
-
-add_action( 'login_enqueue_scripts', 'crb_login_enqueue' );
-function crb_login_enqueue() {
-	# crb_enqueue_style( 'theme-login-styles', get_template_directory_uri() . '/css/login-style.css' );
-}
-
 
 add_action( 'after_setup_theme', 'crb_setup_theme' );
 
