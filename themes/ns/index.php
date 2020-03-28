@@ -1,4 +1,4 @@
-<?php get_header(); the_post(); ?>
+<?php get_header(); ?>
 
 <section class="section-default">
 	<div class="shell">

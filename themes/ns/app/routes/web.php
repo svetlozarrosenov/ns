@@ -5,6 +5,6 @@
 use WPEmerge\Facades\Route;
 
 Route::get()->where(function() { 
-	return is_blog() || is_category(); 
+	return is_blog(); 
 })->handle('BlogController@index');
 

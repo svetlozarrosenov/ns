@@ -51,8 +51,8 @@ $breakpoint-mobile {
 	Article Item
 \* ------------------------------------------------------------ */
 
-.article-item { display: flex; justify-content: space-between; }
-.article-item .article__image { min-width: 297px; width: 297px; margin-right: 73px; }
+.article-item { display: flex; justify-content: space-between; padding: 50px 0; }
+.article-item .article__image { min-width: 297px; width: 297px; min-height: 300px; margin-right: 73px; }
 .article-item .article__image img { width: 100%; }
 
 .article-item h4 { font-family: $ff-titillium; font-weight: 700; font-size: 28px; line-height: 1.3; color: #223f47; max-width: 330px; }

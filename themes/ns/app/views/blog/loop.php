@@ -12,19 +12,18 @@ if ( ! have_posts() ) {
 						<?php while ( have_posts() ) : the_post(); ?>
 							<?php
 							$post = [
-								'image' => carbon_get_the_post_meta( 'crb_post_image' ),
 								'blog_title' => $blog_title
 							];
 							?>
 							<li>
 								<div class="article-item">
-									<?php if ( ! empty( $post['image'] ) ) : ?>
-										<div class="article__image js-animation animation-left">
-											<?php echo wp_get_attachment_image( $post['image'], 'crb_post_image_size' ); ?>
+									<?php if ( has_post_thumbnail() ) : ?>
+										<div class="article__image">
+											<?php echo the_post_thumbnail(); ?>
 										</div><!-- /.article__image -->
 									<?php endif; ?>
 									
-									<div class="article__content js-animation animation-right">
+									<div class="article__content">
 										<h5><?php the_category(', '); ?></h5>
 										
 										<h4>
@@ -47,20 +46,18 @@ if ( ! have_posts() ) {
 					</ol>
 				</div><!-- /.articles -->
 				
+				<div class="section__actions">
 				<?php
 				carbon_pagination( 'posts', [
-					'wrapper_before' => '<div class="section__actions js-animation crb-posts-pagination">',
+					'wrapper_before' => '<div id="blog-pagination" class="pagination">',
 					'wrapper_after' => '</div>',
 					'prev_html' => false,
 					'next_html' => '<a href="{URL}" class="btn btn--long js-load-more">' . esc_html__( 'Load More', 'crb' ) . '</a>',
 					'enable_prev' => false,
 				] );
 				?>
+				</div><!-- section__actions -->
 			</div><!-- /.section__content -->
-			
-			<aside class="section__aside">
-				<?php get_sidebar(); ?>
-			</aside><!-- /.section__aside -->
 		</div><!-- /.section__inner -->
 	</div><!-- /.shell -->
 </section><!-- /.section-default -->

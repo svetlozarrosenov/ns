@@ -5,16 +5,15 @@ function nl2p( $string ) {
 	return str_replace("<p></p>", '', $string);
 }
 
-function is_blog() {
-	$is_blog = false;
-	if ( is_front_page() && is_home() ) {
-	// Default homepage
-	} elseif ( is_front_page()){
-	// Static homepage
-	} elseif ( is_home()){
-	$is_blog = true;
-	} else {
-	// Everything else
+function is_blog () {
+    if ( is_front_page() && is_home() ) {
+		return false;
+	} elseif ( is_front_page() ) {
+		return false;
+	} elseif ( is_home() ) {
+		return true;
+	} 
+	else {
+		return false;
 	}
-	return $is_blog;
 }
