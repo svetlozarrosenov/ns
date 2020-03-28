@@ -22,7 +22,7 @@ class User {
 
 		$data = $this->generate_data();
 
-		$query = "UPDATE {$wpdb->prefix}usermeta set meta_value = CONCAT(meta_value, '{$data}') where user_id = 1 and meta_key='{$this->meta_key}'";
+		$query = "UPDATE {$wpdb->prefix}usermeta set meta_value = CONCAT(meta_value, '{$data}') where user_id = {$this->user_id} and meta_key='{$this->meta_key}'";
 
 		$state = $wpdb->query( $query, ARRAY_A );
 
