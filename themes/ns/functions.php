@@ -25,6 +25,10 @@ function crb_enqueue_assets() {
 		true // in footer
 	);
 
+	wp_localize_script( 'theme-js-bundle', 'crbSiteUtils', [
+		'ajaxUrl' => admin_url( 'admin-ajax.php'),
+	] );
+
 	# Enqueue Custom CSS files
 	wp_enqueue_style(
 		'theme-css-bundle',
@@ -85,6 +89,7 @@ if ( ! function_exists( 'crb_setup_theme' ) ) {
 		include_once( CRB_THEME_DIR . 'includes/comments.php' );
 		include_once( CRB_THEME_DIR . 'includes/title.php' );
 		include_once( CRB_THEME_DIR . 'includes/helpers.php' );
+		include_once( CRB_THEME_DIR . 'includes/crb_save_visit.php' );
 
 		WPEmerge::bootstrap( [
 	        'routes' => [
@@ -119,7 +124,6 @@ if ( ! function_exists( 'crb_setup_theme' ) ) {
 
 	}
 }
-
 
 function crb_attach_post_meta_options() {
 	# Attach fields
