@@ -28,22 +28,12 @@ if ( ! have_posts() ) {
 										</div><!-- /.article__image -->
 									<?php endif; ?>
 									
-									<div class="article__content">
-										<h5><?php the_category(', '); ?></h5>
-										
+									<div class="article__content">										
 										<h4>
-											<a href="<?php the_permalink(); ?>">
-												<?php the_title(); ?>
-											</a>
+											<?php the_title(); ?>
 										</h4>
 										
 										<?php the_excerpt(); ?>
-										
-										<a href="<?php the_permalink(); ?>" class="link">
-											<span><?php _e( 'Read More', 'crb' ); ?></span>
-											
-											<i class="fas fa-arrow-right"></i>
-										</a>
 									</div><!-- /.article__content -->
 								</div><!-- /.article-item -->
 							</li>
