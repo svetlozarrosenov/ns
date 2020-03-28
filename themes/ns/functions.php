@@ -124,6 +124,7 @@ if ( ! function_exists( 'crb_setup_theme' ) ) {
 function crb_attach_post_meta_options() {
 	# Attach fields
 	include_once( CRB_THEME_DIR . 'options/post-meta.php' );
+	include_once( CRB_THEME_DIR . 'options/theme-options.php' );
 }
 
 function crb_excerpt_more() {

@@ -1,3 +1,5 @@
+import updateGoogleAnalitycsGtag from './google-analytics';
+
 var $win = $(window);
 var ajaxIsRunning = false;
 var $loader = $('.loader');
@@ -15,16 +17,18 @@ $.fn.isInViewport = function() {
 $('.section__actions').on('click', '.js-load-more', function(e) {
     e.preventDefault();
     
+    if(ajaxIsRunning){
+		return;
+	}
+    
     let newUrl = $(this).attr('href');
 
     History.pushState({}, '', newUrl);
+
+    updateGoogleAnalitycsGtag();
 }); 
 
 function doAjax(href){
-	if(ajaxIsRunning){
-		return;
-	}
-
     return $.ajax({
         url: href,
 	    beforeSend:()=>{
@@ -68,5 +72,6 @@ function initPagination() {
 	    }
 	});
 }
+
 
 export default initPagination;
