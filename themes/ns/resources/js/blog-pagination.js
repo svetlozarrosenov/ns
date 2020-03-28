@@ -14,20 +14,22 @@ $.fn.isInViewport = function() {
 
 $('.section__actions').on('click', '.js-load-more', function(e) {
     e.preventDefault();
+    
+    let newUrl = $(this).attr('href');
 
-    doAjax($(this));
+    History.pushState({}, '', newUrl);
 }); 
 
-function doAjax($anchor){
+function doAjax(href){
 	if(ajaxIsRunning){
 		return;
 	}
 
     return $.ajax({
-        url: $anchor.attr('href'),
+        url: href,
 	    beforeSend:()=>{
-	      ajaxIsRunning = true;
-	      $loader.show();
+	    	ajaxIsRunning = true;
+	    	$loader.show();
 	    },
     }).done((response)=>{
         let $container = $('.articles ol');
@@ -40,6 +42,17 @@ function doAjax($anchor){
         ajaxIsRunning = false;
     });
 }
+
+$win.bind('popstate', function(){
+	if (ajaxIsRunning) {
+		return;
+	}
+	
+	let href = window.location.href;
+
+	doAjax(href);
+});
+
 
 function triggerDelegateEvent($parent, $child) {
     var event = jQuery.Event('click');

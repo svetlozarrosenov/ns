@@ -14,6 +14,8 @@ add_action( 'wp_enqueue_scripts', 'crb_enqueue_assets' );
 function crb_enqueue_assets() {
 	$template_dir = get_template_directory_uri();
 
+	crb_enqueue_script( 'history-js', $template_dir . '/resources/js/jquery.history.js', array( 'jquery' ) );
+	
 	# Enqueue Custom JS files
 	wp_enqueue_script(
 		'theme-js-bundle',
