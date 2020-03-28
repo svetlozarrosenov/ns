@@ -3,6 +3,11 @@ if ( ! have_posts() ) {
 	return;
 }
 ?>
+
+<div class="loader">
+	<img src="<?php echo get_bloginfo('stylesheet_directory') . '/resources/images/loader.svg'; ?>" alt="">	
+</div><!-- loader -->
+
 <section class="section-default">
 	<div class="shell">
 		<div class="section__inner">

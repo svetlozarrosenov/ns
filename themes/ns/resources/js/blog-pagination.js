@@ -1,5 +1,6 @@
 var $win = $(window);
 var ajaxIsRunning = false;
+var $loader = $('.loader');
 
 $.fn.isInViewport = function() {
     let elementTop = $(this).offset().top;
@@ -26,6 +27,7 @@ function doAjax($anchor){
         url: $anchor.attr('href'),
 	    beforeSend:()=>{
 	      ajaxIsRunning = true;
+	      $loader.show();
 	    },
     }).done((response)=>{
         let $container = $('.articles ol');
@@ -34,6 +36,7 @@ function doAjax($anchor){
 
         $container.append($newPosts);
         $pagination.replaceWith($(response).find('#blog-pagination'));
+        $loader.hide();
         ajaxIsRunning = false;
     });
 }
