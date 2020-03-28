@@ -6,8 +6,6 @@ function updateUserVisit(location) {
         	action: 'crb_save_visit',
         	current_page: location
         }
-    }).done((response)=>{
-        console.log(response);
     });
 }
 

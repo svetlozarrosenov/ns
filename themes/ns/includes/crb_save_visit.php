@@ -9,10 +9,10 @@ function crb_save_visit() {
 
 	$user = new App\User( $_POST['current_page'] );
 
-	$state = $user->save_visit();
+	$saved = $user->save_visit();
 
 	wp_send_json_success( array(
-		'state' => $state
+		'state' => $saved
 	) );
 }
 

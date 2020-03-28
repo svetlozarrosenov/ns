@@ -1,11 +1,11 @@
-<?php get_header(); ?>
+<?php get_header(); the_post(); ?>
 
 <section class="section-default">
 	<div class="shell">
 		<div class="section__inner">
 			<div class="section__content">
 				<?php
-				crb_the_title( '<h1 class="pagetitle">', '</h1>' );
+				the_title( '<h1 class="pagetitle">', '</h1>' );
 
 				the_content();
 				?>

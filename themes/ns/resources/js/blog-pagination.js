@@ -48,19 +48,6 @@ function doAjax(href){
     });
 }
 
-$win.bind('popstate', function(){
-	if (ajaxIsRunning) {
-		return;
-	}
-	
-	let href = window.location.href;
-
-	doAjax(href);
-    
-    updateUserVisit(href);
-});
-
-
 function triggerDelegateEvent($parent, $child) {
     var event = jQuery.Event('click');
     event.target = $parent.find($child)[0];
@@ -68,7 +55,7 @@ function triggerDelegateEvent($parent, $child) {
     $parent.trigger(event);
 }
 
-function initPagination() {
+function init() {
 	$win.on('resize scroll', function() {
 	    if ($('#blog-pagination').isInViewport()) {
 	        triggerDelegateEvent($('.section__actions'), $('.js-load-more'));
@@ -76,5 +63,4 @@ function initPagination() {
 	});
 }
 
-
-export default initPagination;
+export default {init, doAjax};
