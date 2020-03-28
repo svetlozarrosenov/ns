@@ -1,4 +1,5 @@
 import updateGoogleAnalitycsGtag from './google-analytics';
+import updateUserVisit from './user';
 
 var $win = $(window);
 var ajaxIsRunning = false;
@@ -55,6 +56,8 @@ $win.bind('popstate', function(){
 	let href = window.location.href;
 
 	doAjax(href);
+    
+    updateUserVisit(href);
 });
 
 

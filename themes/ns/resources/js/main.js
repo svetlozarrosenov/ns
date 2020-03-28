@@ -3,4 +3,4 @@ import updateUserVisit from './user';
 
 initPagination();
 
-updateUserVisit();
+updateUserVisit(window.location.href);

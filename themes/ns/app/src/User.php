@@ -14,16 +14,22 @@ class User {
 		$this->user_ip = $_SERVER['REMOTE_ADDR'];
 		$this->page_visited = $visitedPage;
 		$this->user_agent = $_SERVER['HTTP_USER_AGENT'];
-		$this->current_date = date('Y-m-d');
+		$this->current_date = date('Y-m-d H:i:s');
 	}
 
-	public function saveVisit() {
+	public function save_visit() {
 		global $wpdb;
 
-		$query = "UPDATE {$wpdb->prefix}usermeta set meta_value = CONCAT(meta_value, '_crb_visits') where user_id = 1 and meta_key='_crb_visits'";
+		$data = $this->generate_data();
 
-		$results = $wpdb->query( $query, ARRAY_A );
+		$query = "UPDATE {$wpdb->prefix}usermeta set meta_value = CONCAT(meta_value, '{$data}') where user_id = 1 and meta_key='{$this->meta_key}'";
 
-		return $results;
+		$state = $wpdb->query( $query, ARRAY_A );
+
+		return $state;
+	}
+
+	private function generate_data() {
+		return $this->user_ip . '|' . $this->page_visited . '|' . $this->user_agent . '|' . $this->current_date . '\r\n\r\n';
 	}
 }
